@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - SatMon</title>
+    <style>
+        /* 页面整体样式 */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 内容容器样式 */
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* 标题样式 */
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 15px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #34495e;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        h3 {
+            color: #444;
+            font-size: 1.1em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* 文本和列表样式 */
+        p {
+            margin-bottom: 15px;
+        }
+
+        .date {
+            color: #777;
+            font-size: 0.9em;
+            margin-bottom: 30px;
+        }
+
+        ul {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* 嵌套列表样式 */
+        ul ul {
+            margin-top: 8px;
+            list-style-type: circle; /* 二级列表空心圆点 */
+        }
+
+        /* 代码/技术术语高亮 */
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-family: "Courier New", Courier, monospace;
+            color: #d63384;
+        }
+
+        /* 链接样式 */
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* 底部版权样式 */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #999;
+            font-size: 0.85em;
+        }
+
+        /* 手机端适配调整 */
+        @media (max-width: 600px) {
+            .container {
+                margin: 0;
+                border-radius: 0;
+                padding: 20px;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Privacy Policy for SatMon</h1>
+    <p class="date">Last updated: January 30, 2026</p >
+
+    <p>SatMon Team is committed to protecting your privacy. This Privacy Policy explains how our mobile application <strong>SatMon</strong> collects, uses, and shares your information. SatMon is a community-driven tool designed to monitor direct-to-cell satellite spectrum usage through crowdsourcing.</p >
+    
+    <p>By downloading and using SatMon, you agree to the collection and use of information in accordance with this policy.</p >
+
+    <h2>1. Information We Collect</h2>
+    <p>We adhere to a principle of data minimization. We only collect the technical data necessary to identify and localize satellite transmitters and detect spectrum misuse. We do not collect any Personal Identifiable Information (PII).</p >
+
+    <h3>A. Information You Provide to Us</h3>
+    <p>We do not require you to create an account, provide your name, phone number, or email address to use the core features of the app.</p >
+
+    <h3>B. Data Collected Automatically</h3>
+    <p>When you use SatMon to perform a spectrum measurement, we collect the following technical data:</p >
+    <ul>
+        <li><strong>Location Data:</strong> We collect your device's precise geolocation (GPS coordinates) at the time of measurement. This is essential for calculating the "Round-Trip Time" (RTT) to satellites and for the geometric diversity required to accurately localize satellite transmitters.</li>
+        <li><strong>Cellular Network Information:</strong> We access standard Android Telephony APIs to collect metadata about the cellular signal your device is receiving. This includes:
+            <ul>
+                <li><strong>Identifiers:</strong> Public Land Mobile Network (PLMN) code, Tracking Area Code (TAC), and Cell ID.</li>
+                <li><strong>Signal Metrics:</strong> Timing Advance (TA), Signal-to-Interference-plus-Noise Ratio (SINR), Reference Signal Received Power (RSRP), and Reference Signal Received Quality (RSRQ).</li>
+                <li><strong>Frequency Data:</strong> The RF band being used.</li>
+            </ul>
+        </li>
+        <li><strong>Device Information:</strong> We may collect basic device model information to calibrate measurements, as different chipsets may have varying performance.</li>
+    </ul>
+
+    <h2>2. What We Do NOT Collect</h2>
+    <p>To ensure your privacy and security:</p >
+    <ul>
+        <li><strong>No Communication Content:</strong> We never access, record, or store the content of your voice calls, SMS messages, or internet browsing history.</li>
+        <li><strong>No Personal Identity:</strong> We do not collect data that links your device's measurements to your real-world identity.</li>
+        <li><strong>No Root Access:</strong> SatMon operates entirely within the standard Android user permissions and does not request or require root privileges.</li>
+    </ul>
+
+    <h2>3. How We Use Your Information</h2>
+    <p>The data collected is sent to our centralized data aggregator for the following purposes:</p >
+    <ul>
+        <li><strong>Satellite Identification & Localization:</strong> To calculate satellite fingerprints (specifically the uplink frame timing shift) and identify which satellite is transmitting signals.</li>
+        <li><strong>Spectrum Monitoring:</strong> To detect if satellite operators are misusing licensed cellular bands or causing unauthorized interference.</li>
+        <li><strong>Service Improvement:</strong> To refine our algorithms and improve the accuracy of satellite tracking.</li>
+    </ul>
+
+    <h2>4. Permissions Required</h2>
+    <p>To function, SatMon requires the following permissions on your device:</p >
+    <ul>
+        <li><code>Location (ACCESS_FINE_LOCATION)</code>: Required to obtain the precise GPS coordinates needed for satellite orbital analysis.</li>
+        <li><code>Phone State (READ_PHONE_STATE)</code>: Required to access cellular network information (like Cell ID and Timing Advance) via standard Telephony APIs.</li>
+        <li><code>Internet</code>: Required to upload anonymized measurement reports to our server.</li>
+    </ul>
+
+    <h2>5. Data Security</h2>
+    <p>We implement reasonable security measures to protect the data we collect. The data transmitted between your device and our aggregator is treated as technical research data.</p >
+
+    <h2>6. Changes to This Privacy Policy</h2>
+    <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p >
+
+    <h2>7. Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy, please contact us at:</p >
+    <ul>
+        <li>Email: <a href=" ">satmon217@gmail.com</a ></li>
+    </ul>
+
+    <div class="footer">
+        &copy; 2026 SatMon Team. All rights reserved.
+    </div>
+</div>
+
+</body>
+</html>
